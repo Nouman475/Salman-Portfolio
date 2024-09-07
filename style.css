@@ -39,7 +39,15 @@ body, html {
     border-radius: 5px;
     transition: background-color 0.3s;
 }
-
+@media (max-width:768px) {
+    .navbar ul{
+        gap: 20px;
+    }
+    .navbar ul li a{
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+}
 .navbar ul li a:hover {
     background-color: rgba(34, 139, 34, 0.7); /* Darker green on hover */
 }
@@ -157,13 +165,21 @@ body, html {
     background-position: center;
     height: 100vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     position: relative;
     text-align: center;
     color: white;
 }
-
+.inner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.inner img{
+    border-radius: 50%;
+}
 .education-section::before {
     content: '';
     position: absolute;
@@ -201,11 +217,14 @@ body, html {
     .education-content p {
         font-size: 1.2rem;
     }
+    .inner{
+        flex-direction: column;
+    }
 }
 
 /* Parallax Section */
 .parallax-section {
-    background-image: url('https://c4.wallpaperflare.com/wallpaper/514/716/58/full-moon-dark-mountains-wallpaper-preview.jpg');
+    background-image: url('https://wallpapers.com/images/featured/dark-mountain-gd3o1mx0wxezbewk.jpg');
     height: 100vh;
     background-attachment: fixed;
     background-position: center;
@@ -335,6 +354,7 @@ body, html {
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
+        margin-bottom: 1rem;
     }
     .contact-form, .contact-photo {
         flex: none;
@@ -350,4 +370,11 @@ body, html {
     .contact-form {
         padding: 20px;
     }
+}
+/*FOOTER*/
+footer{
+    text-align: center;
+    background-color: #313231;
+    color: rgb(255, 255, 255);
+    padding: 1.5rem;
 }
